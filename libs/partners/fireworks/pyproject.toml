@@ -54,7 +54,7 @@ test = [
     "langchain-tests>=1.1.9,<2.0.0",
 ]
 test_integration = []
-lint = ["ruff>=0.13.1,<0.14.0"]
+lint = ["ruff>=0.13.1,<0.17.0"]
 dev = []
 typing = [
     "mypy>=2.1.0,<2.2.0",
