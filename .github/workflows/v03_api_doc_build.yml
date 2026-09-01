@@ -26,12 +26,12 @@ jobs:
     permissions:
       contents: read
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v6
         with:
           ref: v0.3
           path: langchain
 
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v6
         with:
           repository: langchain-ai/langchain-api-docs-html
           path: langchain-api-docs-html
@@ -94,7 +94,7 @@ jobs:
           done
 
       - name: "🐍 Setup Python ${{ env.PYTHON_VERSION }}"
-        uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405 # v6
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v6
         id: setup-python
         with:
           python-version: ${{ env.PYTHON_VERSION }}
@@ -161,7 +161,7 @@ jobs:
           rm -rf ../langchain-api-docs-html/_build/
 
       # Commit and push changes to langchain-api-docs-html repo
-      - uses: EndBug/add-and-commit@290ea2c423ad77ca9c62ae0f5b224379612c0321 # v10.0.0
+      - uses: EndBug/add-and-commit@cc9c08ba6c8df3b93a8f2db63e89b98368ae2ae8 # v11.1.1
         with:
           cwd: langchain-api-docs-html
           message: "Update API docs build from v0.3 branch"
